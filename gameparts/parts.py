@@ -92,6 +92,5 @@ def quantiti_check(size, array):
 
 
 def save_result(player):
-    file = open('results.txt', 'a', encoding='utf-8')
-    file.write(player + '\n')
-    file.close()
+    with open('results.txt', 'a', encoding='utf-8') as text:
+        text.write(player + '\n')

@@ -1,6 +1,7 @@
 from gameparts import Board, quantiti_check, save_result
 
 
+# print(pygame.__doc__)
 game = Board()
 game.display()
 current_player = 'X'
