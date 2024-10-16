@@ -104,17 +104,26 @@ def main():
                     message = f'Победили {current_player}!'
                     print(message)
                     save_result(message)
-                    break
+                    running = False
                 elif game.is_board_full():
                     message = 'Ничья!'
                     print(message)
                     save_result(message)
-                    break
+                    running = False
                 current_player = 'O' if current_player == 'X' else 'X'
                 draw_figures(game.board)
         pygame.display.update()
 
     pygame.quit()
+
+
+# def game_process():
+#     while True:
+#         main()
+#         next_game = input('Хотите сыграть ещё?(yes or no)')
+#         if 'yes' not in next_game:
+#             pygame.quit()
+#             break
 
 
 if __name__ == '__main__':
